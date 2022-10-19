@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _211362.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace _211362.view
         public fm_cidade()
         {
             InitializeComponent();
+        }
+
+        private void btn_incluir_Click(object sender, EventArgs e)
+        {
+            if (txt_nome.Text == String.Empty) return;
+
+            model.cidade c = new model.cidade()
+            {
+                nome = txt_nome.Text,
+                uf = txt_uf.Text
+            };
+
+            c.insert();
         }
     }
 }
