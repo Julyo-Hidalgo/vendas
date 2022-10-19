@@ -70,6 +70,7 @@
             this.dgv_venda.RowTemplate.Height = 25;
             this.dgv_venda.Size = new System.Drawing.Size(837, 150);
             this.dgv_venda.TabIndex = 2;
+            this.dgv_venda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_venda_CellClick);
             // 
             // label2
             // 
@@ -116,6 +117,7 @@
             this.btn_excluir.TabIndex = 8;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_fechar
             // 
@@ -125,6 +127,7 @@
             this.btn_fechar.TabIndex = 9;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_pesquisar
             // 
@@ -137,6 +140,7 @@
             // 
             // txt_codigo
             // 
+            this.txt_codigo.Enabled = false;
             this.txt_codigo.Location = new System.Drawing.Point(52, 43);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(94, 23);
