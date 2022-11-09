@@ -64,7 +64,7 @@
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.cidadesToolStripMenuItem.Text = "cidades";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
@@ -77,8 +77,8 @@
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fm_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu do Programa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fm_menu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

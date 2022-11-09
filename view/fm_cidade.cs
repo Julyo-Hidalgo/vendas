@@ -19,10 +19,33 @@ namespace _211362.view
         {
             InitializeComponent();
             this.cdd.consultar();
-            dgv_venda.DataSource = banco.data_table;
+            dgv_cidade.DataSource = banco.data_table;
         }
 
-        private void btn_incluir_Click(object sender, EventArgs e)
+        private void fm_cidade_Load(object sender, EventArgs e)
+        {
+            limpaCampos();
+            carregaGrid("");
+        }
+
+        void limpaCampos()
+        {
+            txt_codigo.Clear();
+            txt_nome.Clear();
+            txt_uf.Clear();
+            txt_pesquisar.Clear();
+        }
+
+        void carregaGrid(string pesquisa)
+        {
+            cdd = new cidade()
+            {
+                nome = pesquisa
+            };
+            dgv_cidade.DataSource = cdd.consultar();
+        }
+
+        private void btn_incluir_Click_1(object sender, EventArgs e)
         {
             if (txt_nome.Text == String.Empty) return;
 
@@ -33,6 +56,8 @@ namespace _211362.view
             };
 
             c.insert();
+            limpaCampos();
+            carregaGrid("");
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -40,11 +65,17 @@ namespace _211362.view
             this.Close();
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
+        private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgv_cidade.RowCount > 0)
+            {
+                txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
+                txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
+                txt_uf.Text = dgv_cidade.CurrentRow.Cells["uf"].Value.ToString();
+            }
         }
 
-        private void dgv_venda_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_cidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
