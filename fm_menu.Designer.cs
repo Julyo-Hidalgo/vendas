@@ -32,6 +32,8 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,9 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cidadesToolStripMenuItem});
+            this.cidadesToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.marcasToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.cadastroToolStripMenuItem.Text = "cadastro";
@@ -64,9 +68,23 @@
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cidadesToolStripMenuItem.Text = "cidades";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Text = "categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcasToolStripMenuItem.Text = "marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // fm_menu
             // 
@@ -93,5 +111,7 @@
         private MenuStrip menuStrip2;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem cidadesToolStripMenuItem;
+        private ToolStripMenuItem categoriasToolStripMenuItem;
+        private ToolStripMenuItem marcasToolStripMenuItem;
     }
 }

@@ -21,5 +21,17 @@ namespace _211362
             fm_cidade form = new fm_cidade();
             form.Show();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fm_categoria form = new fm_categoria();
+            form.Show();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fm_marca form = new fm_marca();
+            form.Show();
+        }
     }
 }

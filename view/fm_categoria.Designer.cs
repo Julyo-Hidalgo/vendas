@@ -78,6 +78,7 @@
             this.btn_fechar.TabIndex = 48;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_excluir
             // 
@@ -126,6 +127,7 @@
             this.btn_incluir.TabIndex = 44;
             this.btn_incluir.Text = "Incluir";
             this.btn_incluir.UseVisualStyleBackColor = false;
+            this.btn_incluir.Click += new System.EventHandler(this.btn_incluir_Click);
             // 
             // label2
             // 
@@ -133,9 +135,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(273, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(298, 28);
+            this.label2.Size = new System.Drawing.Size(330, 28);
             this.label2.TabIndex = 43;
-            this.label2.Text = "Digite o nome da cidade:";
+            this.label2.Text = "Digite o nome da categoria:";
             // 
             // txt_pesquisar
             // 

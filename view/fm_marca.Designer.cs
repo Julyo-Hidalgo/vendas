@@ -46,7 +46,7 @@
             // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(437, 162);
+            this.txt_nome.Location = new System.Drawing.Point(388, 184);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(320, 23);
             this.txt_nome.TabIndex = 28;
@@ -55,7 +55,7 @@
             // 
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_nome.Location = new System.Drawing.Point(560, 128);
+            this.lbl_nome.Location = new System.Drawing.Point(512, 159);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(69, 22);
             this.lbl_nome.TabIndex = 27;
@@ -64,7 +64,7 @@
             // txt_codigo
             // 
             this.txt_codigo.Enabled = false;
-            this.txt_codigo.Location = new System.Drawing.Point(506, 66);
+            this.txt_codigo.Location = new System.Drawing.Point(506, 85);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(94, 23);
             this.txt_codigo.TabIndex = 26;
@@ -93,6 +93,7 @@
             this.btn_fechar.TabIndex = 24;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_excluir
             // 
@@ -142,6 +143,7 @@
             this.btn_incluir.TabIndex = 20;
             this.btn_incluir.Text = "Incluir";
             this.btn_incluir.UseVisualStyleBackColor = false;
+            this.btn_incluir.Click += new System.EventHandler(this.btn_incluir_Click);
             // 
             // label2
             // 
@@ -174,7 +176,7 @@
             // 
             this.lbl_codigo.AutoSize = true;
             this.lbl_codigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_codigo.Location = new System.Drawing.Point(519, 41);
+            this.lbl_codigo.Location = new System.Drawing.Point(512, 60);
             this.lbl_codigo.Name = "lbl_codigo";
             this.lbl_codigo.Size = new System.Drawing.Size(81, 22);
             this.lbl_codigo.TabIndex = 16;

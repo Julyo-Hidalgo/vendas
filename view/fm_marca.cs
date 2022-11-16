@@ -31,5 +31,15 @@ namespace _211362.view
         {
 
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_incluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

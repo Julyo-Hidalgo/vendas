@@ -72,7 +72,7 @@
             this.txt_codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_codigo.Enabled = false;
             this.txt_codigo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_codigo.Location = new System.Drawing.Point(285, 172);
+            this.txt_codigo.Location = new System.Drawing.Point(286, 172);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(94, 35);
             this.txt_codigo.TabIndex = 11;
@@ -82,7 +82,7 @@
             // 
             this.txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_nome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_nome.Location = new System.Drawing.Point(285, 250);
+            this.txt_nome.Location = new System.Drawing.Point(286, 250);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(320, 35);
             this.txt_nome.TabIndex = 13;
@@ -102,7 +102,7 @@
             // 
             this.txt_uf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_uf.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_uf.Location = new System.Drawing.Point(490, 172);
+            this.txt_uf.Location = new System.Drawing.Point(491, 172);
             this.txt_uf.Name = "txt_uf";
             this.txt_uf.Size = new System.Drawing.Size(115, 35);
             this.txt_uf.TabIndex = 15;
@@ -129,6 +129,7 @@
             this.btn_pesquisar.TabIndex = 33;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.UseVisualStyleBackColor = false;
+            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // btn_fechar
             // 
@@ -178,6 +179,7 @@
             this.btn_alterar.TabIndex = 29;
             this.btn_alterar.Text = "Alterar";
             this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_incluir
             // 
@@ -206,7 +208,7 @@
             // 
             this.txt_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_pesquisar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_pesquisar.Location = new System.Drawing.Point(285, 338);
+            this.txt_pesquisar.Location = new System.Drawing.Point(286, 338);
             this.txt_pesquisar.Name = "txt_pesquisar";
             this.txt_pesquisar.Size = new System.Drawing.Size(286, 35);
             this.txt_pesquisar.TabIndex = 26;
@@ -226,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 722);
+            this.ClientSize = new System.Drawing.Size(1220, 722);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_pesquisar);

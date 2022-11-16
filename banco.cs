@@ -52,8 +52,20 @@ namespace _211362
 
                 comando = new MySqlCommand("create table if not exists cidades "+
                                            "(id integer auto_increment primary key, " +
-                                           "nome varchar (40), " +
+                                           "nome varchar(40), " +
                                            "uf char(2))", conexao);
+                comando.ExecuteNonQuery();
+
+                comando = new MySqlCommand("create table if not exists categorias " +
+                                           "(id integer auto_increment primary key, " +
+                                           "nome varchar(40))", conexao);
+
+                comando.ExecuteNonQuery();
+
+                comando = new MySqlCommand("create table if not exists marcas " +
+                                           "(id integer auto_increment primary key, " +
+                                           "nome varchar(40))", conexao);
+
                 comando.ExecuteNonQuery();
 
                 fecha_conexao();

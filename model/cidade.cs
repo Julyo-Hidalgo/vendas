@@ -83,7 +83,7 @@ namespace _211362.model
                 banco.abre_conexao();
 
                 banco.comando = new MySqlCommand("SELECT * FROM cidades where nome like @nome " +
-                    "order by nome", banco.conexao);
+                    "order by nome ASC", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome + "%");
                 banco.adaptador = new MySqlDataAdapter(banco.comando);
