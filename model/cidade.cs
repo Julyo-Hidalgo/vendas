@@ -41,7 +41,7 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("update cidade set nome = @nome, uf = @uf where id = @id", banco.conexao);
+                banco.comando = new MySqlCommand("update cidades set nome = @nome, uf = @uf where id = @id", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
                 banco.comando.Parameters.AddWithValue("@uf", uf);
@@ -63,7 +63,7 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("delete * from cidade where id = @id", banco.conexao);
+                banco.comando = new MySqlCommand("delete * from cidades where id = @id", banco.conexao);
                 banco.comando.Parameters.AddWithValue("@id", id);
 
                 banco.comando.ExecuteNonQuery();

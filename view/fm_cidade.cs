@@ -90,7 +90,17 @@ namespace _211362.view
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            
+            if (txt_nome.Text == String.Empty) return;
+
+            model.cidade c = new model.cidade()
+            {
+                nome = txt_nome.Text,
+                uf = txt_uf.Text
+            };
+
+            c.update();
+            limpaCampos();
+            carregaGrid("");
         }
     }
 }
