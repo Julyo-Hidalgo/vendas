@@ -39,5 +39,11 @@ namespace _211362
             fm_produto form = new fm_produto();
             form.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fm_cliente form = new fm_cliente();
+            form.Show();
+        }
     }
 }

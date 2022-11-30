@@ -41,5 +41,15 @@ namespace _211362.view
         {
 
         }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,13 +48,13 @@
             this.cb_categoria = new System.Windows.Forms.ComboBox();
             this.cb_marca = new System.Windows.Forms.ComboBox();
             this.estoque = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nud_estoque = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_preco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_estoque)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_foto
@@ -114,6 +114,7 @@
             this.btn_pesquisar.TabIndex = 38;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.UseVisualStyleBackColor = false;
+            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // btn_fechar
             // 
@@ -127,6 +128,7 @@
             this.btn_fechar.TabIndex = 37;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_excluir
             // 
@@ -140,6 +142,7 @@
             this.btn_excluir.TabIndex = 36;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_cancelar
             // 
@@ -153,6 +156,7 @@
             this.btn_cancelar.TabIndex = 35;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_alterar
             // 
@@ -166,6 +170,7 @@
             this.btn_alterar.TabIndex = 34;
             this.btn_alterar.Text = "Alterar";
             this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_incluir
             // 
@@ -179,6 +184,7 @@
             this.btn_incluir.TabIndex = 33;
             this.btn_incluir.Text = "Incluir";
             this.btn_incluir.UseVisualStyleBackColor = false;
+            this.btn_incluir.Click += new System.EventHandler(this.btn_incluir_Click);
             // 
             // label2
             // 
@@ -277,12 +283,12 @@
             this.estoque.TabIndex = 49;
             this.estoque.Text = "Estoque:";
             // 
-            // numericUpDown1
+            // nud_estoque
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(497, 416);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(91, 23);
-            this.numericUpDown1.TabIndex = 51;
+            this.nud_estoque.Location = new System.Drawing.Point(497, 416);
+            this.nud_estoque.Name = "nud_estoque";
+            this.nud_estoque.Size = new System.Drawing.Size(91, 23);
+            this.nud_estoque.TabIndex = 51;
             // 
             // label4
             // 
@@ -296,12 +302,12 @@
             this.label4.TabIndex = 52;
             this.label4.Text = "Preço:";
             // 
-            // textBox1
+            // txt_preco
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 416);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 23);
-            this.textBox1.TabIndex = 53;
+            this.txt_preco.Location = new System.Drawing.Point(268, 416);
+            this.txt_preco.Name = "txt_preco";
+            this.txt_preco.Size = new System.Drawing.Size(120, 23);
+            this.txt_preco.TabIndex = 53;
             // 
             // label6
             // 
@@ -319,9 +325,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 793);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_preco);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nud_estoque);
             this.Controls.Add(this.estoque);
             this.Controls.Add(this.cb_marca);
             this.Controls.Add(this.cb_categoria);
@@ -342,10 +348,10 @@
             this.Controls.Add(this.lbl_codigo);
             this.Controls.Add(this.pic_foto);
             this.Name = "fm_produto";
-            this.Text = "Cadastro de produto";
+            this.Text = "s";
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_estoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,9 +382,9 @@
         private ComboBox cb_categoria;
         private ComboBox cb_marca;
         private Label estoque;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nud_estoque;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txt_preco;
         private Label label6;
     }
 }

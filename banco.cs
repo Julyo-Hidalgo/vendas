@@ -79,6 +79,16 @@ namespace _211362
 
                 comando.ExecuteNonQuery();
 
+                comando = new MySqlCommand("create table if not exists clientes " +
+                                           "(id integer auto_increment primary key, " +
+                                           "nome varchar(40), " +
+                                           "idCidade integer, " +
+                                           "dataNascimento date, " +
+                                           "cpf char(14), " +
+                                           "foto varchar(100), "+
+                                           "venda boolean)", conexao);
+                comando.ExecuteNonQuery();
+
                 fecha_conexao();
             }
             catch (Exception e)

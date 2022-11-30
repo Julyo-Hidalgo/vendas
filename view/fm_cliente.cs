@@ -16,5 +16,35 @@ namespace _211362.view
         {
             InitializeComponent();
         }
+
+        private void btn_incluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

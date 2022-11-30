@@ -1,35 +1,45 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace _211362.model
 {
-    internal class cidade
+    public class cliente
     {
         public int id { get; set; }
         public string nome { get; set; }
-        public string uf { get; set; }
-        
+        public int idCidade { get; set; }
+        public DateTime dataNascimento { get; set; }
+        public double renda { get; set; }
+        public string cpf { get; set; }
+        public string foto { get; set; }
+        public bool venda { get; set; }
+
         public void insert()
         {
             try
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("insert into cidades (nome, uf) values (@nome, @uf)", banco.conexao);
+                banco.comando = new MySqlCommand("insert into clientes (nome, idCidade, dataNascimento, renda, cpf, foto, venda) values (@nome, @idCidade, @dataNascimento, @renda, @cpf, @foto, @venda)", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
-                banco.comando.Parameters.AddWithValue("@uf", uf);
+                banco.comando.Parameters.AddWithValue("@idCidade", idCidade);
+                banco.comando.Parameters.AddWithValue("@dataNascimento", dataNascimento);
+                banco.comando.Parameters.AddWithValue("@renda", renda);
+                banco.comando.Parameters.AddWithValue("@cpf", cpf);
+                banco.comando.Parameters.AddWithValue("@foto", foto);
+                banco.comando.Parameters.AddWithValue("@venda", venda);
 
                 banco.comando.ExecuteNonQuery();
 
                 banco.fecha_conexao();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -41,10 +51,15 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("update cidades set nome = @nome, uf = @uf where id = @id", banco.conexao);
+                banco.comando = new MySqlCommand("update clientes set nome = @nome, idCidade = @idCidade, dataNascimento = @dataNascimento, renda = @renda, cpf = @cpf, foto = @foto, venda = @venda where id = @id", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
-                banco.comando.Parameters.AddWithValue("@uf", uf);
+                banco.comando.Parameters.AddWithValue("@idCidade", idCidade);
+                banco.comando.Parameters.AddWithValue("@dataNascimento", dataNascimento);
+                banco.comando.Parameters.AddWithValue("@renda", renda);
+                banco.comando.Parameters.AddWithValue("@cpf", cpf);
+                banco.comando.Parameters.AddWithValue("@foto", foto);
+                banco.comando.Parameters.AddWithValue("@venda", venda);
                 banco.comando.Parameters.AddWithValue("@id", id);
 
                 banco.comando.ExecuteNonQuery();
@@ -63,7 +78,7 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("delete * from cidades where id = @id", banco.conexao);
+                banco.comando = new MySqlCommand("delete * from clientes where id = @id", banco.conexao);
                 banco.comando.Parameters.AddWithValue("@id", id);
 
                 banco.comando.ExecuteNonQuery();
@@ -82,8 +97,8 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("SELECT * FROM cidades where nome like @nome " +
-                  "order by nome ASC", banco.conexao);
+                banco.comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, ci.uf FROM cidades where nome like @nome " +
+                    "order by nome ASC", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome + "%");
                 banco.adaptador = new MySqlDataAdapter(banco.comando);

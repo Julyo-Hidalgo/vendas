@@ -75,19 +75,6 @@ namespace _211362.view
             }
         }
 
-        private void btn_pesquisar_Click(object sender, EventArgs e)
-        {
-
-            model.cidade c = new model.cidade()
-            {
-                nome = txt_pesquisar.Text
-            };
-
-            c.consultar();
-            carregaGrid(txt_pesquisar.Text);
-            limpaCampos();
-        }
-
         private void btn_alterar_Click(object sender, EventArgs e)
         {
             if (txt_nome.Text == String.Empty) return;
@@ -101,6 +88,29 @@ namespace _211362.view
             c.update();
             limpaCampos();
             carregaGrid("");
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+
+            model.cidade c = new model.cidade()
+            {
+                nome = txt_pesquisar.Text
+            };
+
+            c.consultar();
+            carregaGrid(txt_pesquisar.Text);
+            limpaCampos();
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
