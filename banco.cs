@@ -68,6 +68,17 @@ namespace _211362
 
                 comando.ExecuteNonQuery();
 
+                comando = new MySqlCommand("create table if not exists produtos " +
+                                           "(id integer auto_increment primary key, " +
+                                           "descricao varchar(40), " +
+                                           "idCategoria integer, " +
+                                           "idMarca integer, " +
+                                           "estoque decimal(10, 3), " +
+                                           "valorVenda decimal(10, 2), " +
+                                           "foto varchar(100))", conexao);
+
+                comando.ExecuteNonQuery();
+
                 fecha_conexao();
             }
             catch (Exception e)

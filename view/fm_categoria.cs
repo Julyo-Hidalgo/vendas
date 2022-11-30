@@ -52,5 +52,10 @@ namespace _211362.view
             limpaCampos();
             carregaGrid("");
         }
+
+        private void fm_categoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace _211362.model
 {
@@ -21,7 +22,6 @@ namespace _211362.model
                 banco.comando = new MySqlCommand("insert into marcas (nome, uf) values (@nome, @uf)", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
-                banco.comando.Parameters.AddWithValue("@uf", uf);
 
                 banco.comando.ExecuteNonQuery();
 

@@ -33,5 +33,11 @@ namespace _211362
             fm_marca form = new fm_marca();
             form.Show();
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fm_produto form = new fm_produto();
+            form.Show();
+        }
     }
 }

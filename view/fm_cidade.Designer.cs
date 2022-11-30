@@ -35,15 +35,15 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_uf = new System.Windows.Forms.TextBox();
             this.lbl_uf = new System.Windows.Forms.Label();
-            this.btn_pesquisar = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_incluir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_pesquisar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_pesquisar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cidade)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,25 +118,12 @@
             this.lbl_uf.TabIndex = 14;
             this.lbl_uf.Text = "UF:";
             // 
-            // btn_pesquisar
-            // 
-            this.btn_pesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_pesquisar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
-            this.btn_pesquisar.Location = new System.Drawing.Point(622, 337);
-            this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(113, 36);
-            this.btn_pesquisar.TabIndex = 33;
-            this.btn_pesquisar.Text = "Pesquisar";
-            this.btn_pesquisar.UseVisualStyleBackColor = false;
-            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
-            // 
             // btn_fechar
             // 
-            this.btn_fechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_fechar.BackColor = System.Drawing.Color.LightGray;
             this.btn_fechar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_fechar.ForeColor = System.Drawing.Color.White;
-            this.btn_fechar.Location = new System.Drawing.Point(805, 411);
+            this.btn_fechar.Location = new System.Drawing.Point(831, 313);
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(113, 50);
             this.btn_fechar.TabIndex = 32;
@@ -146,10 +133,10 @@
             // 
             // btn_excluir
             // 
-            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_excluir.BackColor = System.Drawing.Color.LightGray;
             this.btn_excluir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_excluir.ForeColor = System.Drawing.Color.White;
-            this.btn_excluir.Location = new System.Drawing.Point(686, 411);
+            this.btn_excluir.Location = new System.Drawing.Point(712, 313);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(113, 50);
             this.btn_excluir.TabIndex = 31;
@@ -158,10 +145,10 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_cancelar.BackColor = System.Drawing.Color.LightGray;
             this.btn_cancelar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(567, 411);
+            this.btn_cancelar.Location = new System.Drawing.Point(593, 313);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(113, 50);
             this.btn_cancelar.TabIndex = 30;
@@ -170,10 +157,10 @@
             // 
             // btn_alterar
             // 
-            this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_alterar.BackColor = System.Drawing.Color.LightGray;
             this.btn_alterar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_alterar.ForeColor = System.Drawing.Color.White;
-            this.btn_alterar.Location = new System.Drawing.Point(448, 411);
+            this.btn_alterar.Location = new System.Drawing.Point(474, 313);
             this.btn_alterar.Name = "btn_alterar";
             this.btn_alterar.Size = new System.Drawing.Size(113, 50);
             this.btn_alterar.TabIndex = 29;
@@ -183,36 +170,16 @@
             // 
             // btn_incluir
             // 
-            this.btn_incluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_incluir.BackColor = System.Drawing.Color.LightGray;
             this.btn_incluir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_incluir.ForeColor = System.Drawing.Color.White;
-            this.btn_incluir.Location = new System.Drawing.Point(329, 411);
+            this.btn_incluir.Location = new System.Drawing.Point(355, 313);
             this.btn_incluir.Name = "btn_incluir";
             this.btn_incluir.Size = new System.Drawing.Size(113, 50);
             this.btn_incluir.TabIndex = 28;
             this.btn_incluir.Text = "Incluir";
             this.btn_incluir.UseVisualStyleBackColor = false;
             this.btn_incluir.Click += new System.EventHandler(this.btn_incluir_Click_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(285, 307);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(298, 28);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Digite o nome da cidade:";
-            // 
-            // txt_pesquisar
-            // 
-            this.txt_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_pesquisar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_pesquisar.Location = new System.Drawing.Point(286, 338);
-            this.txt_pesquisar.Name = "txt_pesquisar";
-            this.txt_pesquisar.Size = new System.Drawing.Size(286, 35);
-            this.txt_pesquisar.TabIndex = 26;
-            this.txt_pesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -224,21 +191,53 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Dê dois cliques para selecionar as linhas:";
             // 
+            // btn_pesquisar
+            // 
+            this.btn_pesquisar.BackColor = System.Drawing.Color.LightGray;
+            this.btn_pesquisar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
+            this.btn_pesquisar.Location = new System.Drawing.Point(781, 444);
+            this.btn_pesquisar.Name = "btn_pesquisar";
+            this.btn_pesquisar.Size = new System.Drawing.Size(113, 36);
+            this.btn_pesquisar.TabIndex = 37;
+            this.btn_pesquisar.Text = "Pesquisar";
+            this.btn_pesquisar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(444, 414);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 28);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Digite o nome da cidade:";
+            // 
+            // txt_pesquisar
+            // 
+            this.txt_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_pesquisar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_pesquisar.Location = new System.Drawing.Point(445, 445);
+            this.txt_pesquisar.Name = "txt_pesquisar";
+            this.txt_pesquisar.Size = new System.Drawing.Size(286, 35);
+            this.txt_pesquisar.TabIndex = 35;
+            this.txt_pesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // fm_cidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 722);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_pesquisar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_pesquisar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_fechar);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.btn_incluir);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_pesquisar);
             this.Controls.Add(this.txt_uf);
             this.Controls.Add(this.lbl_uf);
             this.Controls.Add(this.txt_nome);
@@ -265,14 +264,14 @@
         private Label lbl_nome;
         private TextBox txt_uf;
         private Label lbl_uf;
-        private Button btn_pesquisar;
         private Button btn_fechar;
         private Button btn_excluir;
         private Button btn_cancelar;
         private Button btn_alterar;
         private Button btn_incluir;
+        private Label label1;
+        private Button btn_pesquisar;
         private Label label2;
         private TextBox txt_pesquisar;
-        private Label label1;
     }
 }
