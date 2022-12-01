@@ -110,6 +110,8 @@ namespace _211362.view
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
+            if (txt_codigo.Text == String.Empty) return;
+
 
         }
     }

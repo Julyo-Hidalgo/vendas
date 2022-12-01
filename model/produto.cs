@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace _211362.model
 {
-    internal class produto
+    public class produto
     {
+        
     }
 }
