@@ -16,6 +16,14 @@ namespace _211362.view
         {
             InitializeComponent();
         }
+        void limpaCampos()
+        {
+            txt_codigo.Clear();
+            txt_nome.Clear();
+            txt_renda.Clear();
+            mtxt_cpf.Clear();
+            txt_pesquisar.Clear();
+        }
 
         private void btn_incluir_Click(object sender, EventArgs e)
         {
@@ -39,7 +47,7 @@ namespace _211362.view
 
         private void btn_fechar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)

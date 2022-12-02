@@ -105,7 +105,7 @@ namespace _211362.view
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            limpaCampos();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)

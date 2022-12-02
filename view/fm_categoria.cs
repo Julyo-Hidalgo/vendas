@@ -43,19 +43,20 @@ namespace _211362.view
         {
             if (txt_nome.Text == String.Empty) return;
 
-            model.cidade c = new model.cidade()
+            model.categoria ctg = new model.categoria()
             {
                 nome = txt_nome.Text
             };
 
-            c.insert();
+            ctg.insert();
             limpaCampos();
             carregaGrid("");
         }
 
         private void fm_categoria_Load(object sender, EventArgs e)
         {
-
+            limpaCampos();
+            carregaGrid("");
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace _211362.view
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            limpaCampos();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)

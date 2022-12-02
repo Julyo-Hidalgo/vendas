@@ -251,6 +251,7 @@
             // mtxt_cpf
             // 
             this.mtxt_cpf.Location = new System.Drawing.Point(449, 322);
+            this.mtxt_cpf.Mask = "___.___.__-__";
             this.mtxt_cpf.Name = "mtxt_cpf";
             this.mtxt_cpf.Size = new System.Drawing.Size(139, 23);
             this.mtxt_cpf.TabIndex = 71;
