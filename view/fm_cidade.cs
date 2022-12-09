@@ -15,17 +15,12 @@ namespace _211362.view
     public partial class fm_cidade : Form
     {
         model.cidade cdd = new cidade();
+        
         public fm_cidade()
         {
             InitializeComponent();
             this.cdd.consultar();
             dgv_cidade.DataSource = banco.data_table;
-        }
-
-        private void fm_cidade_Load(object sender, EventArgs e)
-        {
-            limpaCampos();
-            carregaGrid("");
         }
 
         void limpaCampos()
@@ -43,6 +38,13 @@ namespace _211362.view
                 nome = pesquisa
             };
             dgv_cidade.DataSource = cdd.consultar();
+        }
+
+
+        private void fm_cidade_Load(object sender, EventArgs e)
+        {
+            limpaCampos();
+            carregaGrid("");
         }
 
         private void btn_incluir_Click_1(object sender, EventArgs e)
@@ -81,6 +83,7 @@ namespace _211362.view
 
             model.cidade c = new model.cidade()
             {
+                id = int.Parse(txt_codigo.Text),
                 nome = txt_nome.Text,
                 uf = txt_uf.Text
             };
@@ -92,7 +95,6 @@ namespace _211362.view
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
-
             model.cidade c = new model.cidade()
             {
                 nome = txt_pesquisar.Text
@@ -106,13 +108,23 @@ namespace _211362.view
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             limpaCampos();
+            carregaGrid();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
             if (txt_codigo.Text == String.Empty) return;
 
+            if(MessageBox.Show("Deseja excluir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                model.cidade c = new model.cidade()
+                {
+                    id = int.Parse(txt_codigo.Text)
+                };
 
+                c.delete();
+                limpaCampos();
+                carregaGrid("");
+            }
         }
     }
 }
