@@ -19,7 +19,7 @@ namespace _211362
         {
             try
             {
-                conexao = new MySqlConnection("server=localhost;port=3306;uid=root;pwd=");
+                conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
 
                 conexao.Open();
             }
