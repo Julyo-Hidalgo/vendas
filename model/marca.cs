@@ -22,7 +22,6 @@ namespace _211362.model
                 banco.comando = new MySqlCommand("insert into marcas (nome) values (@nome)", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
-
                 banco.comando.ExecuteNonQuery();
 
                 banco.fecha_conexao();
