@@ -40,6 +40,7 @@ namespace _211362.view
             dgv_cidade.DataSource = cdd.consultar();
         }
 
+
         private void fm_cidade_Load(object sender, EventArgs e)
         {
             limpaCampos();
