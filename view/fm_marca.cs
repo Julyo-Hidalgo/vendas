@@ -62,12 +62,12 @@ namespace _211362.view
         {
             if (txt_nome.Text == String.Empty) return;
 
-            model.marca c = new model.marca()
+            marca marca = new marca()
             {
                 nome = txt_nome.Text
             };
 
-            c.insert();
+            marca.insert();
             limpaCampos();
             carregaGrid("");
         }

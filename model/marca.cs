@@ -19,7 +19,7 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("insert into marcas (nome, uf) values (@nome, @uf)", banco.conexao);
+                banco.comando = new MySqlCommand("insert into marcas (nome) values (@nome)", banco.conexao);
 
                 banco.comando.Parameters.AddWithValue("@nome", nome);
                 banco.comando.ExecuteNonQuery();
