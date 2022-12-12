@@ -27,8 +27,9 @@ namespace _211362.view
             {
                 nome = pesquisa
             };
-            dgv_cidade.DataSource = ctg;
+            dgv_cidade.DataSource = ctg.consultar();
         }
+        
         public fm_categoria()
         {
             InitializeComponent();
