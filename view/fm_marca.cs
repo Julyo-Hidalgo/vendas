@@ -84,7 +84,12 @@ namespace _211362.view
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dgv_venda.RowCount > 0)
+            {
+                txt_codigo.Text = dgv_venda.CurrentRow.Cells["id"].Value.ToString();
+                txt_nome.Text = dgv_venda.CurrentRow.Cells["nome"].Value.ToString();
+                txt_uf.Text = dgv_venda.CurrentRow.Cells["uf"].Value.ToString();
+            }
         }
 
         private void fm_marca_Load(object sender, EventArgs e)
