@@ -17,8 +17,8 @@ namespace _211362.view
         public fm_marca()
         {
             InitializeComponent();
-            this.marca.consultar();
-            dgv_venda.DataSource = banco.data_table;
+            marca.consultar();
+            dgv_cidade.DataSource = banco.data_table;
         }
 
         void limpaCampos()
@@ -34,7 +34,7 @@ namespace _211362.view
             {
                 nome = pesquisa
             };
-            dgv_venda.DataSource = marca.consultar();
+            dgv_cidade.DataSource = marca.consultar();
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
@@ -103,10 +103,10 @@ namespace _211362.view
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_venda.RowCount > 0)
+            if (dgv_cidade.RowCount > 0)
             {
-                txt_codigo.Text = dgv_venda.CurrentRow.Cells["id"].Value.ToString();
-                txt_nome.Text = dgv_venda.CurrentRow.Cells["nome"].Value.ToString();
+                txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
+                txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
             }
 
         }
@@ -115,7 +115,6 @@ namespace _211362.view
         {
             limpaCampos();
             carregaGrid("");
-
         }
     }
 }
