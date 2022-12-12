@@ -50,7 +50,17 @@ namespace _211362.view
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
+            if (txt_codigo.Text == String.Empty) return;
 
+            if (MessageBox.Show("Deseja excluir a marca?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                marca marca = new marca(){
+                    id = int.Parse(txt_codigo.Text)
+                };
+                marca.delete();
+
+                limpaCampos();
+                carregaGrid("");
+            }
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
