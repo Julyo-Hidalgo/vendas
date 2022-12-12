@@ -14,6 +14,7 @@ namespace _211362.view
     public partial class fm_categoria : Form
     {
         model.categoria ctg = new model.categoria();
+
         void limpaCampos()
         {
             txt_codigo.Clear();
@@ -82,6 +83,7 @@ namespace _211362.view
                 c.delete();
                 limpaCampos();
                 carregaGrid("");
+            }
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
