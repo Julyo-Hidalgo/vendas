@@ -76,7 +76,7 @@ namespace _211362.view
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
-        {
+        {/*
             if (txt_nome.Text == String.Empty) return;
 
             categoria categoria = new categoria()
@@ -87,7 +87,7 @@ namespace _211362.view
 
             categoria.update();
             limpaCampos();
-            carregaGrid("");
+            carregaGrid("");*/
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -97,17 +97,17 @@ namespace _211362.view
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_cidade.RowCount > 0)
+            /*if (dgv_cidade.RowCount > 0)
             {
                 txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
                 txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
-            }
+            }*/
         }
 
         private void fm_categoria_Load(object sender, EventArgs e)
-        {
+        {/*
             limpaCampos();
-            carregaGrid("");
+            carregaGrid("");*/
         }
     }
 }
