@@ -45,15 +45,6 @@ namespace _211362.view
             dgv_cidade.DataSource = cdd.consultar();
         }
 
-<<<<<<< HEAD
-        private void fm_cidade_Load(object sender, EventArgs e)
-        {
-            limpaCampos();
-            carregaGrid("");
-        }
-
-=======
->>>>>>> parent of d8ea0b5... atualizando
         private void btn_incluir_Click_1(object sender, EventArgs e)
         {
             if (txt_nome.Text == String.Empty) return;
@@ -90,6 +81,7 @@ namespace _211362.view
 
             model.cidade c = new model.cidade()
             {
+                id = int.Parse(txt_codigo.Text),
                 nome = txt_nome.Text,
                 uf = txt_uf.Text
             };
@@ -101,15 +93,7 @@ namespace _211362.view
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
-
-            model.cidade c = new model.cidade()
-            {
-                nome = txt_pesquisar.Text
-            };
-
-            c.consultar();
             carregaGrid(txt_pesquisar.Text);
-            limpaCampos();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -121,6 +105,15 @@ namespace _211362.view
         {
             if (txt_codigo.Text == String.Empty) return;
 
+            if (MessageBox.Show("Deseja excluir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
+                c = new cidade(){
+                    id = int.Parse(txt_codigo.Text)
+                };
+                c.delete();
+
+                limpaCampos();
+                carregaGrid("");
+            }
 
         }
     }
