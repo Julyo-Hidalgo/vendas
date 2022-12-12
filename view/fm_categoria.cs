@@ -72,17 +72,7 @@ namespace _211362.view
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            if (txt_codigo.Text == String.Empty) return;
-
-            if (MessageBox.Show("Deseja excluir a categoria?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
-                categoria ctg = new categoria(){
-                    id = int.Parse(txt_codigo.Text)
-                };
-
-                ctg.delete();
-
-                limpaCampos();
-                carregaGrid("");
+            //
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
