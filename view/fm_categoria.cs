@@ -78,8 +78,8 @@ namespace _211362.view
                 categoria c = new categoria(){
                     id = int.Parse(txt_codigo.Text)
                 };
-                c.delete();
 
+                c.delete();
                 limpaCampos();
                 carregaGrid("");
         }
