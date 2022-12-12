@@ -220,7 +220,7 @@
             this.Controls.Add(this.dgv_venda);
             this.Controls.Add(this.txt_pesquisar);
             this.Controls.Add(this.lbl_codigo);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "fm_marca";
             this.Text = "Cadastro de marca";
             this.Load += new System.EventHandler(this.fm_marca_Load);
