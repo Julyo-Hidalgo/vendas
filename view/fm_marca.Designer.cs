@@ -168,6 +168,7 @@
             this.dgv_venda.RowTemplate.Height = 25;
             this.dgv_venda.Size = new System.Drawing.Size(878, 114);
             this.dgv_venda.TabIndex = 18;
+            this.dgv_venda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_click);
             // 
             // txt_pesquisar
             // 
@@ -222,6 +223,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "fm_marca";
             this.Text = "Cadastro de marca";
+            this.Load += new System.EventHandler(this.fm_marca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
@@ -42,18 +41,9 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_pesquisar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cidade)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(360, 445);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(493, 28);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Dê dois cliques para selecionar as linhas:";
             // 
             // btn_fechar
             // 
@@ -159,6 +149,7 @@
             this.dgv_cidade.RowTemplate.Height = 25;
             this.dgv_cidade.Size = new System.Drawing.Size(837, 184);
             this.dgv_cidade.TabIndex = 36;
+            this.dgv_cidade.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_click);
             // 
             // lbl_codigo
             // 
@@ -203,6 +194,16 @@
             this.txt_pesquisar.TabIndex = 51;
             this.txt_pesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(360, 445);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(493, 28);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Dê dois cliques para selecionar as linhas:";
+            // 
             // fm_categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -233,8 +234,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Button btn_fechar;
         private Button btn_excluir;
         private Button btn_cancelar;
@@ -248,5 +247,6 @@
         private Button btn_pesquisar;
         private Label label2;
         private TextBox txt_pesquisar;
+        private Label label1;
     }
 }

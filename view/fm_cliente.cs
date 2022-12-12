@@ -54,5 +54,20 @@ namespace _211362.view
         {
 
         }
+
+        private void dgv_click(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fm_cliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

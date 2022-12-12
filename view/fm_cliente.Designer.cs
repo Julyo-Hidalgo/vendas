@@ -204,6 +204,8 @@
             this.dgv_cidade.RowTemplate.Height = 25;
             this.dgv_cidade.Size = new System.Drawing.Size(837, 184);
             this.dgv_cidade.TabIndex = 55;
+            this.dgv_cidade.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_click);
+            this.dgv_cidade.DoubleClick += new System.EventHandler(this.dgv_click);
             // 
             // lbl_codigo
             // 
@@ -345,6 +347,7 @@
             this.Controls.Add(this.lbl_codigo);
             this.Name = "fm_cliente";
             this.Text = "Cadastro de clientes";
+            this.Load += new System.EventHandler(this.fm_cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).EndInit();
             this.ResumeLayout(false);

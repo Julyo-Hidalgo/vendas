@@ -78,5 +78,10 @@ namespace _211362.view
         {
 
         }
+
+        private void dgv_click(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

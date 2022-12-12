@@ -207,6 +207,7 @@
             this.dgv_venda.RowTemplate.Height = 25;
             this.dgv_venda.Size = new System.Drawing.Size(878, 125);
             this.dgv_venda.TabIndex = 31;
+            this.dgv_venda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_click);
             // 
             // txt_pesquisar
             // 
@@ -349,6 +350,7 @@
             this.Controls.Add(this.pic_foto);
             this.Name = "fm_produto";
             this.Text = "s";
+            this.Load += new System.EventHandler(this.fm_produto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_estoque)).EndInit();
