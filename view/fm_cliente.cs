@@ -41,7 +41,7 @@ namespace _211362.view
             cb_cidade.ValueMember = "id";
 
             limpaCampos();
-            carregaGrid("");
+            //carregaGrid("");
 
             dgv_cidade.Columns["id"].Visible = false;
             dgv_cidade.Columns["foto"].Visible = false;
