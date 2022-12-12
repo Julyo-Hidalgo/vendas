@@ -106,7 +106,7 @@ namespace _211362.view
             if (txt_codigo.Text == String.Empty) return;
 
             if (MessageBox.Show("Deseja excluir a cidade?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
-                c = new cidade(){
+                model.cidade c = new cidade(){
                     id = int.Parse(txt_codigo.Text)
                 };
                 c.delete();

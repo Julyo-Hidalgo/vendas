@@ -63,7 +63,7 @@ namespace _211362.model
             {
                 banco.abre_conexao();
 
-                banco.comando = new MySqlCommand("delete * from cidades where id = @id", banco.conexao);
+                banco.comando = new MySqlCommand("delete from cidades where id = @id", banco.conexao);
                 banco.comando.Parameters.AddWithValue("@id", id);
 
                 banco.comando.ExecuteNonQuery();
