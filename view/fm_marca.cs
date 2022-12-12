@@ -92,7 +92,7 @@ namespace _211362.view
                 nome = txt_nome.Text
             };
 
-            c.update();
+            marca.update();
             limpaCampos();
             carregaGrid("");
         }
