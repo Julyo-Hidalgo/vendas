@@ -75,7 +75,7 @@ namespace _211362.view
             if (txt_codigo.Text == String.Empty) return;
 
             if (MessageBox.Show("Deseja excluir a categoria?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
-                model.categoria c = new categoria(){
+                categoria c = new categoria(){
                     id = int.Parse(txt_codigo.Text)
                 };
                 c.delete();
