@@ -7,114 +7,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _211362.model;
 
 namespace _211362.view
 {
     public partial class fm_marca : Form
     {
-        marca marca;
         public fm_marca()
         {
             InitializeComponent();
-            marca.consultar();
-            dgv_cidade.DataSource = banco.data_table;
-        }
-
-        void limpaCampos()
-        {
-            txt_codigo.Clear();
-            txt_nome.Clear();
-            txt_pesquisar.Clear();
-        }
-
-        void carregaGrid(string pesquisa)
-        {
-            marca = new marca()
-            {
-                nome = pesquisa
-            };
-            dgv_cidade.DataSource = marca.consultar();
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
-            carregaGrid(txt_pesquisar.Text);
 
         }
 
         private void txt_pesquisar_TextChanged(object sender, EventArgs e)
         {
-            //remover depois
 
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            if (txt_codigo.Text == String.Empty) return;
 
-            if (MessageBox.Show("Deseja excluir a marca?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
-                marca marca = new marca(){
-                    id = int.Parse(txt_codigo.Text)
-                };
-                marca.delete();
-
-                limpaCampos();
-                carregaGrid("");
         }
 
-        private void btn_fechar_Click(object sender, EventArgs e){
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
         private void btn_incluir_Click(object sender, EventArgs e)
         {
-            if (txt_nome.Text == String.Empty) return;
 
-            marca = new marca()
-            {
-                nome = txt_nome.Text
-            };
-
-            marca.insert();
-            limpaCampos();
-            carregaGrid("");
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            if (txt_nome.Text == String.Empty) return;
 
-            marca marca = new marca()
-            {
-                id = int.Parse(txt_codigo.Text),
-                nome = txt_nome.Text
-            };
-
-            marca.update();
-            limpaCampos();
-            carregaGrid("");
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            limpaCampos();
+
         }
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_cidade.RowCount > 0)
-            {
-                txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
-                txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
-            }
 
         }
 
         private void fm_marca_Load(object sender, EventArgs e)
         {
-            limpaCampos();
-            carregaGrid("");
+
         }
     }
 }
