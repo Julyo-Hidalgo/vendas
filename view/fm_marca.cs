@@ -88,7 +88,6 @@ namespace _211362.view
             {
                 txt_codigo.Text = dgv_venda.CurrentRow.Cells["id"].Value.ToString();
                 txt_nome.Text = dgv_venda.CurrentRow.Cells["nome"].Value.ToString();
-                txt_uf.Text = dgv_venda.CurrentRow.Cells["uf"].Value.ToString();
             }
         }
 
