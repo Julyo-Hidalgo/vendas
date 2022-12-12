@@ -40,7 +40,7 @@ namespace _211362.view
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
-
+            carregaGrid(txt_pesquisar.Text);
         }
 
         private void txt_pesquisar_TextChanged(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace _211362.view
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            limpaCampos();
         }
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
