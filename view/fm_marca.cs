@@ -63,8 +63,9 @@ namespace _211362.view
                 carregaGrid("");
         }
 
-        private void btn_fechar_Click(object sender, EventArgs e)
-@@ -68,51 +39,27 @@ private void btn_fechar_Click(object sender, EventArgs e)
+        private void btn_fechar_Click(object sender, EventArgs e){
+            this.Close();
+        }
 
         private void btn_incluir_Click(object sender, EventArgs e)
         {
@@ -98,7 +99,6 @@ namespace _211362.view
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             limpaCampos();
-
         }
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)

@@ -13,14 +13,7 @@ namespace _211362.view
 {
     public partial class fm_categoria : Form
     {
-        categoria categoria;
-        public fm_categoria()
-        {
-            InitializeComponent();
-            this.categoria.consultar();
-            dgv_cidade.DataSource = banco.data_table;
-        }
-
+        model.categoria ctg = new model.categoria();
         void limpaCampos()
         {
             txt_codigo.Clear();
@@ -30,30 +23,15 @@ namespace _211362.view
 
         void carregaGrid(string pesquisa)
         {
-            categoria = new categoria()
+            ctg = new categoria()
             {
                 nome = pesquisa
             };
-            dgv_cidade.DataSource = categoria.consultar();
+            dgv_cidade.DataSource = ctg;
         }
-
-        private void btn_pesquisar_Click(object sender, EventArgs e)
+        public fm_categoria()
         {
-            carregaGrid(txt_pesquisar.Text);
-        }
-
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
-            if (txt_codigo.Text == String.Empty) return;
-
-            if (MessageBox.Show("Deseja excluir a categoria?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes){
-                categoria categoria = new categoria(){
-                    id = int.Parse(txt_codigo.Text)
-                };
-                categoria.delete();
-
-                limpaCampos();
-                carregaGrid("");
+            InitializeComponent();
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -65,29 +43,25 @@ namespace _211362.view
         {
             if (txt_nome.Text == String.Empty) return;
 
-            categoria = new categoria()
+            model.categoria ctg = new model.categoria()
             {
                 nome = txt_nome.Text
             };
 
-            categoria.insert();
+            ctg.insert();
+            limpaCampos();
+            carregaGrid("");
+        }
+
+        private void fm_categoria_Load(object sender, EventArgs e)
+        {
             limpaCampos();
             carregaGrid("");
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
-        {/*
-            if (txt_nome.Text == String.Empty) return;
+        {
 
-            categoria categoria = new categoria()
-            {
-                id = int.Parse(txt_codigo.Text),
-                nome = txt_nome.Text
-            };
-
-            categoria.update();
-            limpaCampos();
-            carregaGrid("");*/
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -95,19 +69,19 @@ namespace _211362.view
             limpaCampos();
         }
 
-        private void dgv_click(object sender, DataGridViewCellEventArgs e)
+        private void btn_excluir_Click(object sender, EventArgs e)
         {
-            /*if (dgv_cidade.RowCount > 0)
-            {
-                txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
-                txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
-            }*/
+
         }
 
-        private void fm_categoria_Load(object sender, EventArgs e)
-        {/*
-            limpaCampos();
-            carregaGrid("");*/
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_click(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
