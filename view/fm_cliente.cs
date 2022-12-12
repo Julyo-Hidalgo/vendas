@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _211362.model;
 
 namespace _211362.view
 {
     public partial class fm_cliente : Form
     {
+        cidade cdd;
+        cliente cliente;
+
         public fm_cliente()
         {
             InitializeComponent();
@@ -20,9 +24,27 @@ namespace _211362.view
         {
             txt_codigo.Clear();
             txt_nome.Clear();
+            txt_pesquisar.Clear();
+            cb_cidade.SelectedIndex = -1;
             txt_renda.Clear();
             mtxt_cpf.Clear();
             txt_pesquisar.Clear();
+            dtp_data_nascimento.Value = DateTime.Now;
+            check_bloqueia.Checked = false;
+        }
+
+        private void fm_cliente_Load(object sender, EventArgs e)
+        {
+            cdd = new cidade();
+            cb_cidade.DataSource = cdd.consultar();
+            cb_cidade.DisplayMember = "nome";
+            cb_cidade.ValueMember = "id";
+
+            limpaCampos();
+            carregaGrid("");
+
+            dgv_cidade.Columns["id"].Visible = false;
+            dgv_cidade.Columns["foto"].Visible = false;
         }
 
         private void btn_incluir_Click(object sender, EventArgs e)
@@ -56,11 +78,6 @@ namespace _211362.view
         }
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void fm_cliente_Load(object sender, EventArgs e)
         {
 
         }

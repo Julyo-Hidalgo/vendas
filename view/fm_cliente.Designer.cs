@@ -51,7 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_bloqueia = new System.Windows.Forms.CheckBox();
+            this.check_bloqueia = new System.Windows.Forms.CheckBox();
             this.txt_renda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).BeginInit();
@@ -296,15 +296,15 @@
             this.label6.TabIndex = 76;
             this.label6.Text = "Renda:";
             // 
-            // cb_bloqueia
+            // check_bloqueia
             // 
-            this.cb_bloqueia.AutoSize = true;
-            this.cb_bloqueia.Location = new System.Drawing.Point(421, 242);
-            this.cb_bloqueia.Name = "cb_bloqueia";
-            this.cb_bloqueia.Size = new System.Drawing.Size(107, 19);
-            this.cb_bloqueia.TabIndex = 77;
-            this.cb_bloqueia.Text = "Bloqueia venda";
-            this.cb_bloqueia.UseVisualStyleBackColor = true;
+            this.check_bloqueia.AutoSize = true;
+            this.check_bloqueia.Location = new System.Drawing.Point(421, 242);
+            this.check_bloqueia.Name = "check_bloqueia";
+            this.check_bloqueia.Size = new System.Drawing.Size(107, 19);
+            this.check_bloqueia.TabIndex = 77;
+            this.check_bloqueia.Text = "Bloqueia venda";
+            this.check_bloqueia.UseVisualStyleBackColor = true;
             // 
             // txt_renda
             // 
@@ -322,7 +322,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 825);
             this.Controls.Add(this.txt_renda);
-            this.Controls.Add(this.cb_bloqueia);
+            this.Controls.Add(this.check_bloqueia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -380,7 +380,7 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private CheckBox cb_bloqueia;
+        private CheckBox check_bloqueia;
         private TextBox txt_renda;
     }
 }
