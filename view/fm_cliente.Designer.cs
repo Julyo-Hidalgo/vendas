@@ -197,7 +197,7 @@
             this.txt_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dgv_cidade
-            // 
+            // d
             this.dgv_cidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_cidade.Location = new System.Drawing.Point(80, 635);
             this.dgv_cidade.Name = "dgv_cidade";

@@ -19,7 +19,7 @@ namespace _211362.view
         {
             InitializeComponent();
             this.marca.consultar();
-            dgv_cidade.DataSource = banco.data_table;
+            dgv_venda.DataSource = banco.data_table;
         }
 
         void limpaCampos()
@@ -35,7 +35,7 @@ namespace _211362.view
             {
                 nome = pesquisa
             };
-            dgv_cidade.DataSource = marca.consultar();
+            dgv_venda.DataSource = marca.consultar();
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
