@@ -26,7 +26,6 @@ namespace _211362.view
         {
             txt_codigo.Clear();
             txt_nome.Clear();
-            txt_uf.Clear();
             txt_pesquisar.Clear();
         }
 
@@ -36,7 +35,7 @@ namespace _211362.view
             {
                 nome = pesquisa
             };
-            dgv_marca.DataSource = marca.consultar();
+            dgv_cidade.DataSource = marca.consultar();
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
@@ -65,8 +64,7 @@ namespace _211362.view
 
             model.marca c = new model.marca()
             {
-                nome = txt_nome.Text,
-                uf = txt_uf.Text
+                nome = txt_nome.Text
             };
 
             c.insert();
