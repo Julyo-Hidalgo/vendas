@@ -29,7 +29,7 @@ namespace _211362.view
             };
             dgv_cidade.DataSource = ctg.consultar();
         }
-        
+
         public fm_categoria()
         {
             InitializeComponent();
@@ -82,7 +82,11 @@ namespace _211362.view
 
         private void dgv_click(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dgv_cidade.RowCount > 0)
+            {
+                txt_codigo.Text = dgv_cidade.CurrentRow.Cells["id"].Value.ToString();
+                txt_nome.Text = dgv_cidade.CurrentRow.Cells["nome"].Value.ToString();
+            }
         }
     }
 }
